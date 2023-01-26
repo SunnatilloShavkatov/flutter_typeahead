@@ -120,6 +120,7 @@ class _FormExampleState extends State<FormExample> {
                 return suggestionsBox;
               },
               onSuggestionSelected: (String suggestion) {
+                print(suggestion);
                 this._typeAheadController.text = suggestion;
               },
               validator: (value) =>
