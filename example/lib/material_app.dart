@@ -10,8 +10,7 @@ class MyMaterialApp extends StatelessWidget {
     return MaterialApp(
       title: 'flutter_typeahead demo',
       scrollBehavior: MaterialScrollBehavior().copyWith(
-        dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch}
-      ),
+          dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch}),
       home: MyHomePage(),
     );
   }
@@ -112,9 +111,7 @@ class _FormExampleState extends State<FormExample> {
                 return CitiesService.getSuggestions(pattern);
               },
               itemBuilder: (context, String suggestion) {
-                return ListTile(
-                  title: Text(suggestion),
-                );
+                return ListTile(title: Text(suggestion));
               },
               transitionBuilder: (context, suggestionsBox, controller) {
                 return suggestionsBox;
