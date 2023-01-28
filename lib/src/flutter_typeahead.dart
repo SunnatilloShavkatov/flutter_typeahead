@@ -1046,6 +1046,7 @@ class _TypeAheadFieldState<T> extends State<TypeAheadField<T>>
     return CompositedTransformTarget(
       link: this._layerLink,
       child: SingleChildScrollView(
+        padding: EdgeInsets.zero,
         child: TextField(
           key: TestKeys.textFieldKey,
           focusNode: this._effectiveFocusNode,
@@ -1847,7 +1848,7 @@ class _SuggestionsBox {
     if (this.isOpened) return;
     assert(this._overlayEntry != null);
     resize();
-    Overlay.of(context)?.insert(this._overlayEntry!);
+    Overlay.of(context).insert(this._overlayEntry!);
     this.isOpened = true;
   }
 
